@@ -12,7 +12,7 @@
 }
 
 .row:not(:last-child) {
-    margin-bottom: 8rem; /* $gutter-vertical */
+    margin-bottom: 4rem; /* $gutter-vertical */
 }
 
 .row [class^="col-"] {
