@@ -206,3 +206,139 @@ console.log(sonIguales); // false (porque JavaScript es sensible a mayúsculas)
 // 10. Comprueba si dos strings tienen la misma longitud
 let mismaLongitud = string1.length === string2.length;
 console.log(mismaLongitud); // true
+
+
+                                        // 4. CONDITIONALS EXERCISES
+// 1. Imprime por consola tu nombre si una variable toma su valor
+let name = "Juan";
+if (name === "Juan") {
+    console.log("Mi nombre es Juan");
+}
+
+// 2. Imprime por consola un mensaje si el usuario y contraseña conciden con unos establecidos
+let usuario = "admin";
+let contrasena = "1234";
+if (usuario === "admin" && contrasena === "1234") {
+    console.log("Usuario y contraseña correctos.");
+} else {
+    console.log("Usuario o contraseña incorrectos.");
+}
+
+// 3. Verifica si un número es positivo, negativo o cero e imprime un mensaje
+let number = -5;
+if (number > 0) {
+    console.log("El número es positivo.");
+} else if (number < 0) {
+    console.log("El número es negativo.");
+} else {
+    console.log("El número es cero.");
+}
+
+// 4. Verifica si una persona puede votar o no (mayor o igual a 18) e indica cuántos años le faltan
+let age = 16;
+if (age >= 18) {
+    console.log("Puedes votar.");
+} else {
+    let anosRestantes = 18 - age;
+    console.log(`Te faltan ${anosRestantes} años para votar.`);
+}
+
+// 5. Usa el operador ternario para asignar el valor "adulto" o "menor" a una variable dependiendo de la edad
+let clasificacion = edad >= 18 ? "adulto" : "menor";
+console.log(clasificacion); // "menor"
+
+// 6. Muestra en qué estación del año nos encontramos dependiendo del valor de una variable "mes"
+let mes = 4; // Abril
+if (mes === 12 || mes === 1 || mes === 2) {
+    console.log("Estamos en invierno.");
+} else if (mes >= 3 && mes <= 5) {
+    console.log("Estamos en primavera.");
+} else if (mes >= 6 && mes <= 8) {
+    console.log("Estamos en verano.");
+} else if (mes >= 9 && mes <= 11) {
+    console.log("Estamos en otoño.");
+} else {
+    console.log("Mes no válido.");
+}
+
+// 7. Muestra el número de días que tiene un mes dependiendo de la variable del ejercicio anterior
+if (mes === 2) {
+    console.log("Febrero tiene 28 o 29 días.");
+} else if ([4, 6, 9, 11].includes(mes)) {
+    console.log("Este mes tiene 30 días.");
+} else {
+    console.log("Este mes tiene 31 días.");
+}
+
+// 8. Usa un switch para imprimir un mensaje de saludo diferente dependiendo del idioma
+let idioma = "es";
+switch (idioma) {
+    case "es":
+        console.log("¡Hola!");
+        break;
+    case "en":
+        console.log("Hello!");
+        break;
+    case "fr":
+        console.log("Bonjour!");
+        break;
+    case "de":
+        console.log("Hallo!");
+        break;
+    default:
+        console.log("Idioma no reconocido.");
+}
+
+// 9. Usa un switch para hacer de nuevo el ejercicio 6 (estaciones del año)
+mes = 7;
+switch (mes) {
+    case 12:
+    case 1:
+    case 2:
+        console.log("Estamos en invierno.");
+        break;
+    case 3:
+    case 4:
+    case 5:
+        console.log("Estamos en primavera.");
+        break;
+    case 6:
+    case 7:
+    case 8:
+        console.log("Estamos en verano.");
+        break;
+    case 9:
+    case 10:
+    case 11:
+        console.log("Estamos en otoño.");
+        break;
+    default:
+        console.log("Mes no válido.");
+}
+
+// 10. Usa un switch para hacer de nuevo el ejercicio 7 (número de días del mes)
+let month = 2; // Cambia el valor del mes para probar diferentes casos
+
+switch (month) {
+    case 2:
+        console.log("Febrero tiene 28 o 29 días.");
+        break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        console.log("Este mes tiene 30 días.");
+        break;
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        console.log("Este mes tiene 31 días.");
+        break;
+    default:
+        console.log("Mes no válido.");
+}
+
