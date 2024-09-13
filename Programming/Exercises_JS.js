@@ -153,6 +153,7 @@ let complexResult = (5 + 3 > 7) && (10 % 2 === 0) || !(20 / 5 < 4);
 console.log(complexResult); // true, tras combinar operadores aritméticos, lógicos y de comparación
 
 
+
                                         // 2. STRING EXERCISES
 
 // 1. Concatena dos cadenas de texto
@@ -208,7 +209,9 @@ let mismaLongitud = string1.length === string2.length;
 console.log(mismaLongitud); // true
 
 
+
                                         // 3. CONDITIONALS EXERCISES
+
 // 1. Imprime por consola tu nombre si una variable toma su valor
 let name = "Juan";
 if (name === "Juan") {
@@ -343,7 +346,9 @@ switch (month) {
 }
 
 
+
                                             // 4. STRUCTURES EXERCISES
+
 // 1. Crea un array que almacene cinco animales
 let animales = ["Perro", "Gato", "Elefante", "Tigre", "León"];
 console.log(animales);
@@ -397,5 +402,182 @@ meses.set("verano", ["Junio", "Julio", "Agosto"]);
 console.log(meses);
 
 // 10. Crea un Array, transfórmalo a un Set y almacénalo en un Map
-let numerosArray = [1, 2, 3, 4, 5, 5, 6];
-let numerosSet = new Set(numerosArray); 
+let numArray = [1, 2, 3, 4, 5, 5, 6];
+let numerosSet = new Set(numArray); 
+
+
+
+                                                // 5. LOOPS EXERCISES
+
+// 1. Crea un bucle que imprima los números del 1 al 20 (usando while)
+console.log("Ejercicio 1: Números del 1 al 20 con while");
+let i = 1;
+while (i <= 20) {
+    console.log(i);
+    i++;
+}
+
+// 2. Crea un bucle que sume todos los números del 1 al 100 y muestre el resultado (usando do...while)
+console.log("Ejercicio 2: Suma de los números del 1 al 100 con do...while");
+let sum = 0;
+let j = 1;
+do {
+    sum += j;
+    j++;
+} while (j <= 100);
+console.log("Suma total:", sum);
+
+// 3. Crea un bucle que imprima todos los números pares entre 1 y 50 (usando for)
+console.log("Ejercicio 3: Números pares entre 1 y 50 con for");
+for (let k = 2; k <= 50; k += 2) {
+    console.log(k);
+}
+
+// 4. Dado un array de nombres, usa un bucle para imprimir cada nombre en la consola (usando for...of)
+console.log("Ejercicio 4: Imprimir nombres de un array con for...of");
+let nombres = ["Ana", "Carlos", "Lucía", "Miguel"];
+for (let nombre of nombres) {
+    console.log(nombre);
+}
+
+// 5. Escribe un bucle que cuente el número de vocales en una cadena de texto (usando while)
+console.log("Ejercicio 5: Contar vocales en una cadena de texto con while");
+let cadena = "Hola Mundo";
+let vocales = 0;
+let vocalesArray = ['a', 'e', 'i', 'o', 'u'];
+let m = 0;
+
+while (m < cadena.length) {
+    if (vocalesArray.includes(cadena[m].toLowerCase())) {
+        vocales++;
+    }
+    m++;
+}
+console.log("Número de vocales:", vocales);
+
+// 6. Dado un array de números, usa un bucle para multiplicar todos los números y mostrar el producto (usando do...while)
+console.log("Ejercicio 6: Producto de todos los números de un array con do...while");
+let numeros = [2, 3, 4, 5];
+let producto = 1;
+let n = 0;
+
+do {
+    producto *= numeros[n];
+    n++;
+} while (n < numeros.length);
+
+console.log("Producto total:", producto);
+
+// 7. Escribe un bucle que imprima la tabla de multiplicar del 5 (usando while)
+console.log("Ejercicio 7: Tabla de multiplicar del 5 con while");
+let p = 1;
+while (p <= 10) {
+    console.log(`5 x ${p} = ${5 * p}`);
+    p++;
+}
+
+// 8. Usa un bucle para invertir una cadena de texto (usando do...while)
+console.log("Ejercicio 8: Invertir una cadena de texto con do...while");
+let text = "JavaScript";
+let invertido = "";
+let o = text.length - 1;
+
+do {
+    invertido += text[o];
+    o--;
+} while (o >= 0);
+
+console.log("Texto invertido:", invertido);
+
+// 9. Usa un bucle para generar los primeros 10 números de la secuencia de Fibonacci (usando while)
+console.log("Ejercicio 9: Primeros 10 números de la secuencia de Fibonacci con while");
+let fib = [0, 1];
+let q = 2;
+
+while (q < 10) {
+    fib.push(fib[q - 1] + fib[q - 2]);
+    q++;
+}
+console.log("Secuencia de Fibonacci:", fib);
+
+// 10. Dado un array de números, usa un bucle para crear un nuevo array que contenga solo los números mayores a 10 (usando for)
+console.log("Ejercicio 10: Números mayores a 10 de un array con for");
+let numerosArray = [5, 12, 8, 20, 3, 15];
+let mayoresADiez = [];
+
+for (let numero of numerosArray) {
+    if (numero > 10) {
+        mayoresADiez.push(numero);
+    }
+}
+console.log("Números mayores a 10:", mayoresADiez);
+
+
+
+                                            // 6. FUNCTIONS EXERCISES
+
+// 1. Crea una función que reciba dos números y devuelva su suma
+function sumar(a, b) {
+    return a + b;
+}
+console.log("1. Suma de 5 y 3:", sumar(5, 3));
+
+// 2. Crea una función que reciba un array de números y devuelva el mayor de ellos
+const encontrarMayor = function(arr) {
+    return Math.max(...arr);
+};
+console.log("2. Mayor número del array [1, 5, 3, 9]:", encontrarMayor([1, 5, 3, 9]));
+
+// 3. Crea una función que reciba un string y devuelva el número de vocales que contiene
+const contarVocales = (str) => {
+    const vocales = 'aeiouAEIOU';
+    return [...str].filter(char => vocales.includes(char)).length;
+};
+console.log("3. Número de vocales en 'javascript':", contarVocales('javascript'));
+
+// 4. Crea una función que reciba un array de strings y devuelva un nuevo array con las strings en mayúsculas
+function convertirMayusculas(arr) {
+    return arr.map(str => str.toUpperCase());
+}
+console.log("4. Array en mayúsculas:", convertirMayusculas(["hola", "mundo", "javascript"]));
+
+// 5. Crea una función que reciba un número y devuelva true si es primo, y false en caso contrario
+const esPrimo = (num) => {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+};
+console.log("5. El número 7 es primo:", esPrimo(7));
+
+// 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
+const elementosComunes = function(arr1, arr2) {
+    return arr1.filter(el => arr2.includes(el));
+};
+console.log("6. Elementos comunes entre [1, 2, 3] y [2, 3, 4]:", elementosComunes([1, 2, 3], [2, 3, 4]));
+
+// 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
+const sumaPares = (arr) => {
+    return arr.filter(num => num % 2 === 0).reduce((acc, num) => acc + num, 0);
+};
+console.log("7. Suma de números pares en [1, 2, 3, 4, 5, 6]:", sumaPares([1, 2, 3, 4, 5, 6]));
+
+// 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
+const elevarCuadrado = function(arr) {
+    return arr.map(num => num ** 2);
+};
+console.log("8. Números elevados al cuadrado:", elevarCuadrado([2, 3, 4]));
+
+// 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
+const invertirPalabras = (str) => {
+    return str.split(' ').reverse().join(' ');
+};
+console.log("9. Palabras en orden inverso:", invertirPalabras("Hola desde JavaScript"));
+
+// 10. Crea una función que calcule el factorial de un número dado
+function factorial(n) {
+    if (n === 0) return 1;
+    return n * factorial(n - 1);
+}
+console.log("10. Factorial de 5:", factorial(5));
