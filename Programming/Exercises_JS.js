@@ -153,7 +153,7 @@ let complexResult = (5 + 3 > 7) && (10 % 2 === 0) || !(20 / 5 < 4);
 console.log(complexResult); // true, tras combinar operadores aritméticos, lógicos y de comparación
 
 
-                                    // 1. STRING EXERCISES
+                                        // 2. STRING EXERCISES
 
 // 1. Concatena dos cadenas de texto
 let texto1 = "Hola";
@@ -208,7 +208,7 @@ let mismaLongitud = string1.length === string2.length;
 console.log(mismaLongitud); // true
 
 
-                                        // 4. CONDITIONALS EXERCISES
+                                        // 3. CONDITIONALS EXERCISES
 // 1. Imprime por consola tu nombre si una variable toma su valor
 let name = "Juan";
 if (name === "Juan") {
@@ -342,3 +342,60 @@ switch (month) {
         console.log("Mes no válido.");
 }
 
+
+                                            // 4. STRUCTURES EXERCISES
+// 1. Crea un array que almacene cinco animales
+let animales = ["Perro", "Gato", "Elefante", "Tigre", "León"];
+console.log(animales);
+
+// 2. Añade dos más. Uno al principio y otro al final
+animales.unshift("Caballo"); // Añadir al principio
+animales.push("Jirafa");     // Añadir al final
+console.log(animales);
+
+// 3. Elimina el que se encuentra en tercera posición
+animales.splice(2, 1); // Elimina el tercer elemento (índice 2)
+console.log(animales);
+
+// 4. Crea un set que almacene cinco libros
+let libros = new Set(["1984", "Cien Años de Soledad", "El Quijote", "Fahrenheit 451", "Matar a un Ruiseñor"]);
+console.log(libros);
+
+// 5. Añade dos más. Uno de ellos repetido
+libros.add("La Odisea");
+libros.add("1984"); // Este no se añadirá porque los sets no permiten duplicados
+console.log(libros);
+
+// 6. Elimina uno concreto a tu elección
+libros.delete("Fahrenheit 451");
+console.log(libros);
+
+// 7. Crea un mapa que asocie el número del mes a su nombre
+let meses = new Map([
+    [1, "Enero"],
+    [2, "Febrero"],
+    [3, "Marzo"],
+    [4, "Abril"],
+    [5, "Mayo"],
+    [6, "Junio"],
+    [7, "Julio"],
+    [8, "Agosto"],
+    [9, "Septiembre"],
+    [10, "Octubre"],
+    [11, "Noviembre"],
+    [12, "Diciembre"]
+]);
+console.log(meses);
+
+// 8. Comprueba si el mes número 5 existe en el map e imprime su valor
+if (meses.has(5)) {
+    console.log("El mes 5 es:", meses.get(5)); // Imprime "Mayo"
+}
+
+// 9. Añade al mapa una clave con un array que almacene los meses de verano
+meses.set("verano", ["Junio", "Julio", "Agosto"]);
+console.log(meses);
+
+// 10. Crea un Array, transfórmalo a un Set y almacénalo en un Map
+let numerosArray = [1, 2, 3, 4, 5, 5, 6];
+let numerosSet = new Set(numerosArray); 
