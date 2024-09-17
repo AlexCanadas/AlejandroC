@@ -703,3 +703,132 @@ let [primeroNum, ...restoNumeros] = [10, 20, 30, 40];
 let { a: valorA, ...restoObjeto } = { a: 1, b: 2, c: 3 };
 console.log("10. Desestructuración con propagación en array:", primeroNum, restoNumeros);
 console.log("10. Desestructuración con propagación en objeto:", valorA, restoObjeto);
+
+
+                                            // 9. CLASSES EXERCISES
+
+// 1. Crea una clase que reciba dos propiedades
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // 2. Añade un método a la clase que utilice las propiedades
+    saludar() {
+        console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`);
+    }
+}
+
+// 3. Muestra los valores de las propiedades e invoca a la función
+let persona1 = new Persona("Juan", 30);
+console.log("3. Nombre:", persona1.nombre);
+console.log("3. Edad:", persona1.edad);
+persona1.saludar(); // Invocar el método
+
+// 4. Añade un método estático a la primera clase
+class PersonaConMetodoEstatico {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    saludar() {
+        console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`);
+    }
+
+    // Método estático
+    static info() {
+        console.log("4. Soy una clase que representa a una Persona.");
+    }
+}
+
+// 5. Haz uso del método estático
+PersonaConMetodoEstatico.info(); // Uso del método estático
+
+// 6. Crea una clase que haga uso de herencia
+class Estudiante extends Persona {
+    constructor(nombre, edad, carrera) {
+        super(nombre, edad); // Llamada al constructor de la clase padre
+        this.carrera = carrera;
+    }
+
+    estudiar() {
+        console.log(`${this.nombre} está estudiando ${this.carrera}.`);
+    }
+}
+
+let estudiante1 = new Estudiante("Ana", 22, "Ingeniería");
+console.log("6. Nombre:", estudiante1.nombre);
+console.log("6. Carrera:", estudiante1.carrera);
+estudiante1.saludar(); // Heredado de Persona
+estudiante1.estudiar(); // Método propio de Estudiante
+
+// 7. Crea una clase que haga uso de getters y setters
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    // Getter
+    get precioProducto() {
+        return this.precio;
+    }
+
+    // Setter
+    set precioProducto(nuevoPrecio) {
+        if (nuevoPrecio > 0) {
+            this.precio = nuevoPrecio;
+        } else {
+            console.log("El precio debe ser positivo.");
+        }
+    }
+}
+
+// 8. Modifica la clase con getters y setters para que use propiedades privadas
+class ProductoConPrivado {
+    #precio; // Propiedad privada
+
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.#precio = precio;
+    }
+
+    // Getter
+    get precioProducto() {
+        return this.#precio;
+    }
+
+    // Setter
+    set precioProducto(nuevoPrecio) {
+        if (nuevoPrecio > 0) {
+            this.#precio = nuevoPrecio;
+        } else {
+            console.log("El precio debe ser positivo.");
+        }
+    }
+}
+
+// 9. Utiliza los get y set y muestra sus valores
+let producto1 = new ProductoConPrivado("Laptop", 1000);
+console.log("9. Precio inicial:", producto1.precioProducto); // Llamar al getter
+producto1.precioProducto = 1200; // Llamar al setter
+console.log("9. Precio actualizado:", producto1.precioProducto);
+
+// 10. Sobrescribe un método de una clase que utilice herencia
+class Empleado extends Persona {
+    constructor(nombre, edad, puesto) {
+        super(nombre, edad);
+        this.puesto = puesto;
+    }
+
+    // Sobrescribir el método saludar
+    saludar() {
+        console.log(`Hola, soy ${this.nombre}, trabajo como ${this.puesto}.`);
+    }
+}
+
+let empleado1 = new Empleado("Carlos", 35, "Desarrollador");
+empleado1.saludar(); // Método sobrescrito
+
