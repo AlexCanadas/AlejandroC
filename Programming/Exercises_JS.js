@@ -832,3 +832,130 @@ class Empleado extends Persona {
 let empleado1 = new Empleado("Carlos", 35, "Desarrollador");
 empleado1.saludar(); // Método sobrescrito
 
+
+                                        // 10. ERRORS HANDLING EXERCISES
+
+// 1. Captura una excepción utilizando try-catch
+console.log("// 1. Captura una excepción utilizando try-catch");
+try {
+    let x = y; // 'y' no está definida
+} catch (error) {
+    console.log("Error capturado:", error.message);
+}
+
+// 2. Captura una excepción utilizando try-catch y finally
+console.log("\n// 2. Captura una excepción utilizando try-catch y finally");
+try {
+    let z = a; // 'a' no está definida
+} catch (error) {
+    console.log("Error capturado:", error.message);
+} finally {
+    console.log("Esto siempre se ejecuta");
+}
+
+// 3. Lanza una excepción genérica
+console.log("\n// 3. Lanza una excepción genérica");
+try {
+    throw new Error("Excepción genérica lanzada");
+} catch (error) {
+    console.log("Error capturado:", error.message);
+}
+
+// 4. Crea una excepción personalizada
+console.log("\n// 4. Crea una excepción personalizada");
+class CustomException extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "CustomException";
+    }
+}
+
+// 5. Lanza una excepción personalizada
+console.log("\n// 5. Lanza una excepción personalizada");
+try {
+    throw new CustomException("Esta es una excepción personalizada");
+} catch (error) {
+    console.log(`${error.name}: ${error.message}`);
+}
+
+// 6. Lanza varias excepciones según una lógica definida
+console.log("\n// 6. Lanza varias excepciones según una lógica definida");
+function checkNumber(num) {
+    if (num < 0) {
+        throw new Error("Número negativo");
+    } else if (num === 0) {
+        throw new Error("Número cero");
+    } else if (num > 100) {
+        throw new Error("Número mayor que 100");
+    }
+}
+
+try {
+    checkNumber(101); // Cambiar para probar diferentes casos
+} catch (error) {
+    console.log("Error capturado:", error.message);
+}
+
+// 7. Captura varias excepciones en un mismo try-catch
+console.log("\n// 7. Captura varias excepciones en un mismo try-catch");
+try {
+    checkNumber(-1); // Cambiar para probar diferentes excepciones
+    let u = v; // 'v' no está definida
+} catch (error) {
+    console.log("Error capturado:", error.message);
+}
+
+// 8. Crea un bucle que intente transformar a float cada valor y capture y muestre los errores
+console.log("\n// 8. Crea un bucle que intente transformar a float cada valor y capture y muestre los errores");
+let valores = ["10.5", "abc", "25.4", "xyz", "30"];
+for (let valor of valores) {
+    try {
+        let num = parseFloat(valor);
+        if (isNaN(num)) throw new Error(`No se puede convertir '${valor}' a número`);
+        console.log(`Convertido: ${valor} -> ${num}`);
+    } catch (error) {
+        console.log("Error capturado:", error.message);
+    }
+}
+
+// 9. Crea una función que verifique si un objeto tiene una propiedad específica y lance una excepción personalizada
+console.log("\n// 9. Verifica si un objeto tiene una propiedad específica y lanza una excepción personalizada");
+function verificarPropiedad(obj, prop) {
+    if (!obj.hasOwnProperty(prop)) {
+        throw new CustomException(`El objeto no tiene la propiedad '${prop}'`);
+    }
+}
+
+try {
+    let obj = { nombre: "Juan" };
+    verificarPropiedad(obj, "edad"); // Prueba lanzando la excepción
+} catch (error) {
+    console.log(`${error.name}: ${error.message}`);
+}
+
+// 10. Crea una función que realice reintentos en caso de error hasta un máximo de 10
+console.log("\n// 10. Función que realiza reintentos en caso de error");
+function ejecutarConReintentos(func, maxReintentos) {
+    let intentos = 0;
+    while (intentos < maxReintentos) {
+        try {
+            func(); // Intentamos ejecutar la función
+            console.log("Ejecución exitosa");
+            return; // Salimos si es exitosa
+        } catch (error) {
+            intentos++;
+            console.log(`Error en intento ${intentos}: ${error.message}`);
+        }
+    }
+    console.log("Superado el máximo de reintentos");
+}
+
+// Simulación de una función que falla algunas veces
+function funcionQueFalla() {
+    if (Math.random() < 0.7) {
+        throw new Error("Fallo aleatorio");
+    }
+}
+
+ejecutarConReintentos(funcionQueFalla, 10); // Realizar hasta 10 reintentos
+
