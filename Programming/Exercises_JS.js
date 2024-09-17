@@ -581,3 +581,66 @@ function factorial(n) {
     return n * factorial(n - 1);
 }
 console.log("10. Factorial de 5:", factorial(5));
+
+
+
+                                            // 7. OBJECTS EXERCISES
+
+// 1. Crea un objeto con 3 propiedades
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    profesion: "Desarrollador"
+};
+console.log("1. Objeto persona:", persona);
+
+// 2. Accede y muestra su valor
+console.log("2. Accede a la propiedad 'nombre':", persona.nombre);
+
+// 3. Agrega una nueva propiedad
+persona.nacionalidad = "Española";
+console.log("3. Objeto con nueva propiedad 'nacionalidad':", persona);
+
+// 4. Elimina una de las 3 primeras propiedades
+delete persona.profesion;
+console.log("4. Objeto después de eliminar la propiedad 'profesion':", persona);
+
+// 5. Agrega una función e invócala
+persona.saludar = function() {
+    return `Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`;
+};
+console.log("5. Invocando la función 'saludar':", persona.saludar());
+
+// 6. Itera las propiedades del objeto
+console.log("6. Iterando propiedades del objeto:");
+for (let propiedad in persona) {
+    console.log(`${propiedad}: ${persona[propiedad]}`);
+}
+
+// 7. Crea un objeto anidado
+let coche = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    propietario: {
+        nombre: "Ana",
+        edad: 28
+    }
+};
+console.log("7. Objeto anidado 'coche':", coche);
+
+// 8. Accede y muestra el valor de las propiedades anidadas
+console.log("8. Accede a la propiedad anidada 'propietario.nombre':", coche.propietario.nombre);
+
+// 9. Comprueba si los dos objetos creados son iguales
+let otroCoche = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    propietario: {
+        nombre: "Ana",
+        edad: 28
+    }
+};
+console.log("9. Los objetos 'coche' y 'otroCoche' son iguales:", JSON.stringify(coche) === JSON.stringify(otroCoche));
+
+// 10. Comprueba si dos propiedades diferentes son iguales
+console.log("10. ¿La marca del coche y el nombre de la persona son iguales?:", coche.marca === persona.nombre);
