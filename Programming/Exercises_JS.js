@@ -644,3 +644,62 @@ console.log("9. Los objetos 'coche' y 'otroCoche' son iguales:", JSON.stringify(
 
 // 10. Comprueba si dos propiedades diferentes son iguales
 console.log("10. ¿La marca del coche y el nombre de la persona son iguales?:", coche.marca === persona.nombre);
+
+
+                                // 8. DESTRUCTURING-SPREADING EXERCISES
+                        
+// 1. Usa desestructuración para extraer los dos primeros elementos de un array
+let numeross = [10, 20, 30, 40, 50];
+let [primero, segundo] = numeross;
+console.log("1. Primer y segundo número:", primero, segundo);
+
+// 2. Usa desestructuración en un array y asigna un valor predeterminado a una variable
+let [a1, b1, c1 = 100] = [1, 2];
+console.log("2. Valor predeterminado para 'c':", c1);
+
+// 3. Usa desestructuración para extraer dos propiedades de un objeto
+let persona = { nombre1: "Juan", edad1: 30, profesion: "Desarrollador" };
+let { nombre1, edad1 } = persona;
+console.log("3. Nombre y edad de la persona:", nombre1, edad1);
+
+// 4. Usa desestructuración para extraer dos propiedades de un objeto y asígnalas a nuevas variables con nombres diferentes
+let { nombre: nombrePersona, profesion: trabajo } = persona;
+console.log("4. Nombre renombrado y profesión:", nombrePersona, trabajo);
+
+// 5. Usa desestructuración para extraer dos propiedades de un objeto anidado
+let coche1 = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    propietario: {
+        nombre: "Ana",
+        edad: 28
+    }
+};
+let { propietario: { nombre: nombrePropietario, edad: edadPropietario } } = coche1;
+console.log("5. Nombre y edad del propietario del coche:", nombrePropietario, edadPropietario);
+
+// 6. Usa propagación para combinar dos arrays en uno nuevo
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+let combinado = [...array1, ...array2];
+console.log("6. Arrays combinados:", combinado);
+
+// 7. Usa propagación para crear una copia de un array
+let copiaArray = [...array1];
+console.log("7. Copia del array:", copiaArray);
+
+// 8. Usa propagación para combinar dos objetos en uno nuevo
+let objeto1 = { a: 1, b: 2 };
+let objeto2 = { c: 3, d: 4 };
+let combinadoObjetos = { ...objeto1, ...objeto2 };
+console.log("8. Objetos combinados:", combinadoObjetos);
+
+// 9. Usa propagación para crear una copia de un objeto
+let copiaObjeto = { ...objeto1 };
+console.log("9. Copia del objeto:", copiaObjeto);
+
+// 10. Combina desestructuración y propagación
+let [primeroNum, ...restoNumeros] = [10, 20, 30, 40];
+let { a: valorA, ...restoObjeto } = { a: 1, b: 2, c: 3 };
+console.log("10. Desestructuración con propagación en array:", primeroNum, restoNumeros);
+console.log("10. Desestructuración con propagación en objeto:", valorA, restoObjeto);
