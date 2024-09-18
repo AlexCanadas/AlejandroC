@@ -959,3 +959,84 @@ function funcionQueFalla() {
 
 ejecutarConReintentos(funcionQueFalla, 10); // Realizar hasta 10 reintentos
 
+
+                                        // 11. CONSOLE METHODS EXERCISES
+
+// 1. Crea un función que utilice error correctamente
+console.log("// 1. Crea una función que utilice error correctamente");
+function mostrarError(mensaje) {
+    console.error("Error:", mensaje);
+}
+mostrarError("Este es un error personalizado");
+
+// 2. Crea una función que utilice warn correctamente
+console.log("\n// 2. Crea una función que utilice warn correctamente");
+function mostrarAdvertencia(mensaje) {
+    console.warn("Advertencia:", mensaje);
+}
+mostrarAdvertencia("Este es un mensaje de advertencia");
+
+// 3. Crea una función que utilice info correctamente
+console.log("\n// 3. Crea una función que utilice info correctamente");
+function mostrarInfo(mensaje) {
+    console.info("Información:", mensaje);
+}
+mostrarInfo("Este es un mensaje informativo");
+
+// 4. Utiliza table
+console.log("\n// 4. Utiliza table");
+const animaless = [
+    { nombre: "Perro", tipo: "Mamífero", patas: 4 },
+    { nombre: "Gato", tipo: "Mamífero", patas: 4 },
+    { nombre: "Pato", tipo: "Ave", patas: 2 }
+];
+console.table(animaless);
+
+// 5. Utiliza group
+console.log("\n// 5. Utiliza group");
+console.group("Grupo de Mensajes");
+console.log("Mensaje 1 dentro del grupo");
+console.log("Mensaje 2 dentro del grupo");
+console.groupEnd();
+console.log("Mensaje fuera del grupo");
+
+// 6. Utiliza time
+console.log("\n// 6. Utiliza time");
+console.time("Tiempo de ejecución");
+for (let i = 0; i < 1000000; i++) {} // Un bucle que no hace nada, solo consume tiempo
+console.timeEnd("Tiempo de ejecución");
+
+// 7. Valida con assert si un número es positivo
+console.log("\n// 7. Valida con assert si un número es positivo");
+function esPositivo(num) {
+    console.assert(num > 0, "El número no es positivo:", num);
+}
+esPositivo(5);
+esPositivo(-3);
+
+// 8. Utiliza count
+console.log("\n// 8. Utiliza count");
+function contarLlamadas() {
+    console.count("Función llamada");
+}
+contarLlamadas();
+contarLlamadas();
+contarLlamadas();
+
+// 9. Utiliza trace
+console.log("\n// 9. Utiliza trace");
+function funcionA() {
+    funcionB();
+}
+function funcionB() {
+    funcionC();
+}
+function funcionC() {
+    console.trace("Rastro de la función");
+}
+funcionA();
+
+// 10. Utiliza clear
+console.log("\n// 10. Utiliza clear");
+// Este comando borrará la consola. Puedes descomentarlo para probarlo
+// console.clear();
