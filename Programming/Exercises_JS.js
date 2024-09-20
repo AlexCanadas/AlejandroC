@@ -404,6 +404,10 @@ console.log(meses);
 // 10. Crea un Array, transfórmalo a un Set y almacénalo en un Map
 let numArray = [1, 2, 3, 4, 5, 5, 6];
 let numerosSet = new Set(numArray); 
+let numerosMap = new Map();
+numerosMap.set("numeros", numerosSet);
+
+console.log(numerosMap);
 
 
 
@@ -714,7 +718,7 @@ class Persona {
         this.edad = edad;
     }
 
-    // 2. Añade un método a la clase que utilice las propiedades
+// 2. Añade un método a la clase que utilice las propiedades
     saludar() {
         console.log(`Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`);
     }
