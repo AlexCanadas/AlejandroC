@@ -1,0 +1,67 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="container mx-auto py-8">
+    <!-- Hero Section -->
+    <section class="bg-green-500 text-white py-12 text-center">
+      <h1 class="text-4xl font-bold mb-4">Bienvenido a Healthy</h1>
+      <p class="text-lg">Tu guía para una vida sana, deporte y recetas nutritivas</p>
+      <a href="/about" class="mt-6 inline-block bg-white text-green-500 font-bold py-2 px-4 rounded">Conócenos más</a>
+    </section>
+
+    <!-- Section: Últimas Recetas -->
+    <section class="py-12">
+      <h2 class="text-3xl font-bold text-center mb-8">Últimas Recetas</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Repetir para cada post de recetas -->
+        {% for post in latest_recipes %}
+          <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">{{ post.title }}</h3>
+              <p class="text-gray-600 mb-4">{{ post.excerpt }}</p>
+              <a href="{{ post.link }}" class="text-green-500 font-bold">Leer más</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Section: Consejos de Vida Saludable -->
+    <section class="py-12 bg-gray-100">
+      <h2 class="text-3xl font-bold text-center mb-8">Consejos para una Vida Saludable</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Ejercicio Regular</h3>
+          <p class="text-gray-700">Realizar ejercicio de manera constante no solo te ayuda a mantenerte en forma, sino que también mejora tu salud mental. Puedes comenzar con rutinas sencillas como caminar, correr o nadar.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Alimentación Balanceada</h3>
+          <p class="text-gray-700">Una alimentación saludable debe incluir una variedad de alimentos frescos, naturales y ricos en nutrientes. Evita los alimentos ultraprocesados y reduce el consumo de azúcares.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Descanso Adecuado</h3>
+          <p class="text-gray-700">Dormir al menos 7-8 horas por noche es esencial para que tu cuerpo se recupere y para mantener una mente despejada. Trata de establecer una rutina para dormir a la misma hora cada día.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Hidratación</h3>
+          <p class="text-gray-700">Mantenerte bien hidratado es clave para el funcionamiento adecuado de tu organismo. Asegúrate de beber suficiente agua a lo largo del día, especialmente si haces ejercicio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Testimonios -->
+    <section class="py-12">
+      <h2 class="text-3xl font-bold text-center mb-8">Testimonios de Nuestros Usuarios</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Repetir para cada testimonio -->
+        {% for testimonial in testimonials %}
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <p class="text-gray-700 mb-4">"{{ testimonial.content }}"</p>
+            <p class="text-green-500 font-bold">{{ testimonial.author }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+{% endblock %}
