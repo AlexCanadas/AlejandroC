@@ -3,7 +3,6 @@
  * Template Name: Contact
  * Description: Contact template
  * 
- * Investigate Pass form
  */
 
  global $wpdb;
@@ -11,46 +10,34 @@
 
  $context = Timber::context();
 
-
+$name = "";
 $email = "";
 $description = "";
  
 $results = $wpdb->get_results("SHOW TABLES LIKE '$table_name'");
 
 if (empty($results)) {
-    echo "La tabla no existe";
+    echo "The table does not exist";
     die();
 }
 
  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['email']) && isset($_POST['description'])) {
+    if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['description'])) {
 
-
+        $name       = $_POST['name'];
         $email       = $_POST['email'];
         $description = $_POST['description'];
-        
-        /**
-         * 
-         * 1. Validar campos 
-         * 2. Insertar en la base datos o tirar error
-         * 
-         */
-
-         $email = $_POST['email'];
-         $description = $_POST['description'];
- 
- 
-         // Insertar los datos en la tabla "contacts"
-         $table_name = 'wp_contacts'; // Asegurarse de incluir el prefijo de WordPress
          
          $data = array(
+             'name' => $name,  
              'email' => $email,
              'description' => $description,
-             'created_at' => current_time('mysql') // Guardar la fecha y hora actuales
+             'created_at' => current_time('mysql') // Save current date and time
          );
  
-         $format = array('%s', '%s', '%s'); // Formatos para email, password y created_at
+         $format = array('%s', '%s', '%s', '%s'); // Formatting
  
+         // If success, inserting data to the correct table
          $success = $wpdb->insert($table_name, $data, $format);
 
          if ($success === false) {
@@ -63,18 +50,19 @@ if (empty($results)) {
              $context['message'] = "ok";
 
              /**
-              * Send email, find information how to send email with wp
+              * PENDIENTE!    Enviar correo, encontrar como mandar correo con wp (wp_mail???)
               */
 
          } else {
-             // Responder con error
-             $context['message'] = "Error al insertar los datos";
+             // Reply with error message
+             $context['message'] = "Error while inserting the data";
          }
 
+    }else {
+        $context['message'] = "Please fill in all required fields.";
     }
 
 }
-
 
 $templates  = array( 'contact.twig');
 

@@ -9,23 +9,26 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 require_once __DIR__ . '/src/StarterSite.php';
 
+// Initialize Timber.
 Timber\Timber::init();
 
-// Sets the directories (inside your theme) to find .twig files.
+// Sets the directories (inside your theme) to find .twig files, the files must be in /templates and/or /views.
 Timber::$dirname = [ 'templates', 'views' ];
 
+// Instantiate the StarterSite class.
 new StarterSite();
 
-function prefix_create_custom_post_type() {
-    /*
-     * The $labels describes how the post type appears.
-     */
 
+// Function to create the custom post type (CPT)
+function prefix_create_custom_post_type() {
+    
+    // The $labels describes how the post type appears.
     $labels = array(
         'name'          => 'Recipes',
         'singular_name' => 'Recipe', 
     );
 
+     // The $supports parameter describes what type of content the post type supports.
     $supports = array(
         'title',        // Post title
         'editor',       // Post content
@@ -38,10 +41,7 @@ function prefix_create_custom_post_type() {
         'custom-fields' // Supports by custom fields
     ); 
 
-    /*
-     * The $args parameter holds important parameters for the custom post type
-     */
- 
+    // The $args parameter holds important parameters for the custom post type
     $args = array(
         'labels'              => $labels,
         'description'         => 'Post type post recipe', // Description
@@ -65,8 +65,10 @@ function prefix_create_custom_post_type() {
     register_post_type('recipe', $args); //Create a post type with the slug is ‘recipe’ and arguments in $args.
 }
 
+// We call the function using the hook init
 add_action('init', 'prefix_create_custom_post_type');
 
+// Function to add the style.css by using wp_enqueue_style (this is meant to load css in wp)
 function mytheme_enqueue_styles() {
     wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0', 'all');
 }
@@ -74,12 +76,13 @@ function mytheme_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
 
 
-// Añadimos filtro y función para sacar las últimas recetas del CPT
+// We add a filter to print the last 6 recipes of the CPT 
 add_filter('timber_context', 'add_recipes_to_context');
 function add_recipes_to_context($context) {
+    // Context = associative array, latest_recipes = key, Timber::get_posts() object´s array of posts
     $context['latest_recipes'] = Timber::get_posts(array(
         'post_type' => 'recipe',
-        'posts_per_page' => 6, // Número de recetas a mostrar
+        'posts_per_page' => 6, // 6 recipes to show
         'orderby' => 'date',
         'order' => 'DESC'
     ));
