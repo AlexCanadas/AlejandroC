@@ -107,7 +107,7 @@ function add_all_recipes_to_context($context) {
 function enqueue_custom_scripts() {
     wp_enqueue_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), null, true); 
 
-    // Locate script to pass the URL of AJAX
+    // Transfer data from PHP to JS. Locate script to pass the AJAX´s URL
     wp_localize_script('custom-js', 'ajax_object', array(
         'ajax_url' => admin_url('admin-ajax.php'),
     ));
@@ -149,5 +149,5 @@ function handle_contact_form_submission() {
     wp_die();
 }
 
-add_action('wp_ajax_handle_contact_form', 'handle_contact_form_submission'); // Para usuarios logeados?
-add_action('wp_ajax_nopriv_handle_contact_form', 'handle_contact_form_submission'); // Para usuarios no logueados?
+add_action('wp_ajax_handle_contact_form', 'handle_contact_form_submission'); // For authenticated users
+add_action('wp_ajax_nopriv_handle_contact_form', 'handle_contact_form_submission'); // For non authenticated users
