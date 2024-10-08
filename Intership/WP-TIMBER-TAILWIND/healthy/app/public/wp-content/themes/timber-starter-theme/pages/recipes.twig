@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="container mx-auto py-8">
+
+  <!-- Section: All Recipes -->
+  <section class="py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">Todas las Recetas</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      {% for recipe in all_recipes %}
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="{{ recipe.thumbnail|resize(600,200) }}" alt="{{ recipe.title }}" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold mb-2">{{ recipe.title }}</h3>
+            <p class="text-gray-600 mb-4">{{ recipe.excerpt }}</p>
+            <a href="{{ recipe.link }}" class="text-green-500 font-bold">Leer más</a>
+          </div>
+        </div>
+      {% else %}
+        <p class="text-gray-700 text-center">No hay recetas disponibles en este momento.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>
+{% endblock %}

@@ -1,0 +1,203 @@
+[02-Oct-2024 12:13:36 UTC] PHP Warning:  require_once(C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy/vendor/autoload.php): Failed to open stream: No such file or directory in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php on line 15
+[02-Oct-2024 12:13:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy/vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php:15
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php on line 15
+[02-Oct-2024 12:13:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[02-Oct-2024 12:13:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[02-Oct-2024 12:13:41 UTC] PHP Warning:  require_once(C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy/vendor/autoload.php): Failed to open stream: No such file or directory in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php on line 15
+[02-Oct-2024 12:13:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy/vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php:15
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php on line 15
+[02-Oct-2024 12:18:25 UTC] PHP Fatal error:  Uncaught Error: Call to protected method Timber\Timber::init() from global scope in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php:17
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php on line 17
+[02-Oct-2024 12:19:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Timber\Timber::get_menu() in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\src\StarterSite.php:50
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\class-wp-hook.php(324): App\StarterSite->add_to_context(Array)
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\timber-library\lib\Timber.php(270): apply_filters('timber/context', Array)
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\timber-library\lib\Timber.php(240): Timber\Timber::get_context()
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\index.php(23): Timber\Timber::context(Array)
+#5 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Alex\\L...')
+#6 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#7 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#8 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\src\StarterSite.php on line 50
+[02-Oct-2024 12:22:58 UTC] PHP Warning:  require_once(C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy/vendor/autoload.php): Failed to open stream: No such file or directory in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php on line 15
+[02-Oct-2024 12:22:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy/vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php:15
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\temaHealthy\functions.php on line 15
+[02-Oct-2024 12:34:54 UTC] PHP Warning:  Attempt to read property "title" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\class-wp-customize-widgets.php on line 905
+[03-Oct-2024 09:11:41 UTC] PHP Warning:  require_once(C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test/vendor/autoload.php): Failed to open stream: No such file or directory in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test\functions.php on line 8
+[03-Oct-2024 09:11:41 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test/vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test\functions.php:8
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test\functions.php on line 8
+[03-Oct-2024 09:11:46 UTC] PHP Warning:  require_once(C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test/vendor/autoload.php): Failed to open stream: No such file or directory in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test\functions.php on line 8
+[03-Oct-2024 09:11:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test/vendor/autoload.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test\functions.php:8
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\test\functions.php on line 8
+[03-Oct-2024 10:49:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Timber\Timber::get_menu() in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\src\StarterSite.php:50
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\class-wp-hook.php(324): App\StarterSite->add_to_context(Array)
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\plugin.php(205): WP_Hook->apply_filters(Array, Array)
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\timber-library\lib\Timber.php(270): apply_filters('timber/context', Array)
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\timber-library\lib\Timber.php(240): Timber\Timber::get_context()
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\page.php(17): Timber\Timber::context()
+#5 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\Alex\\L...')
+#6 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#7 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#8 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\src\StarterSite.php on line 50
+[03-Oct-2024 10:50:56 UTC] PHP Fatal error:  Uncaught Error: Class "Timber\Timber" not found in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\timber-library\bin\timber.php:21
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\functions.php(15): require_once()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#5 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#6 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\timber-library\bin\timber.php on line 21
+[03-Oct-2024 10:51:21 UTC] PHP Fatal error:  Uncaught Error: Class "Timber\Timber" not found in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\timber-library\bin\timber.php:21
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\functions.php(15): require_once()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#5 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#6 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\timber-library\bin\timber.php on line 21
+[03-Oct-2024 10:56:35 UTC] PHP Warning:  require_once(C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x/timber-library/timber.php): Failed to open stream: No such file or directory in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\functions.php on line 14
+[03-Oct-2024 10:56:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x/timber-library/timber.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\functions.php:14
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\functions.php on line 14
+[03-Oct-2024 10:58:46 UTC] PHP Warning:  require_once(C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x/timber-library/timber.php): Failed to open stream: No such file or directory in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\functions.php on line 14
+[03-Oct-2024 10:58:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x/timber-library/timber.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\functions.php:14
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\wp-admin\customize.php(13): require_once('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\starter-theme-2.x\functions.php on line 14
+[03-Oct-2024 14:50:50 UTC] PHP Fatal error:  Cannot redeclare add_to_context() (previously declared in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php:81) in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 110
+[03-Oct-2024 14:50:50 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 367
+[03-Oct-2024 14:50:50 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\class-wp-recovery-mode-email-service.php on line 368
+[04-Oct-2024 07:35:38 UTC] WordPress database error Table 'local.wp_contacts' doesn't exist for query SHOW FULL COLUMNS FROM `wp_contacts` made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/timber-starter-theme/custom-pages/template-contact.php')
+[04-Oct-2024 07:35:38 UTC] WordPress database error Table 'local.wp_contacts' doesn't exist for query SHOW FULL COLUMNS FROM `wp_contacts` made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/timber-starter-theme/custom-pages/template-contact.php')
+[04-Oct-2024 08:35:40 UTC] PHP Warning:  Undefined array key "name" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-contact.php on line 28
+[04-Oct-2024 08:35:40 UTC] PHP Warning:  Undefined array key "name" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-contact.php on line 39
+[04-Oct-2024 08:35:40 UTC] WordPress database error Table 'local.wp_contacts' doesn't exist for query SHOW FULL COLUMNS FROM `wp_contacts` made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/timber-starter-theme/custom-pages/template-contact.php')
+[04-Oct-2024 08:35:40 UTC] WordPress database error Table 'local.wp_contacts' doesn't exist for query SHOW FULL COLUMNS FROM `wp_contacts` made by require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/themes/timber-starter-theme/custom-pages/template-contact.php')
+[07-Oct-2024 10:09:31 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property Timber\Timber::$debug in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php:19
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 19
+[07-Oct-2024 10:09:31 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property Timber\Timber::$debug in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php:19
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 19
+[07-Oct-2024 10:10:02 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "members" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-about-us.php:18
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-about-us.php on line 18
+[07-Oct-2024 10:12:28 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property Timber\Timber::$debug in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php:16
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 16
+[07-Oct-2024 10:12:28 UTC] PHP Fatal error:  Uncaught Error: Access to undeclared static property Timber\Timber::$debug in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php:16
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 16
+[07-Oct-2024 10:18:26 UTC] PHP Fatal error:  Uncaught Error: Call to protected Timber\Timber::__construct() from global scope in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php:16
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 16
+[07-Oct-2024 10:18:26 UTC] PHP Fatal error:  Uncaught Error: Call to protected Timber\Timber::__construct() from global scope in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php:16
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-settings.php(668): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-config.php(103): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\wp-load.php(50): require_once('C:\\Users\\Alex\\L...')
+#3 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Alex\\L...')
+#4 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#5 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 16
+[07-Oct-2024 12:31:37 UTC] PHP Warning:  Undefined property: stdClass::$id in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\mi-plugin-contacts\mi-plugin-contacts.php on line 82
+[07-Oct-2024 12:32:23 UTC] PHP Warning:  Undefined property: stdClass::$id in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\mi-plugin-contacts\mi-plugin-contacts.php on line 81
+[07-Oct-2024 15:26:46 UTC] WordPress database error Unknown column 'description' in 'field list' for query INSERT INTO `wp_contacts` (`name`, `email`, `description`, `created_at`) VALUES ('Alejandro', 'alejandrocanadasgarcia@gmail.com', 'testtttt', 2024) made by do_action('wp_ajax_handle_contact_form'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form_submission
+[07-Oct-2024 15:40:44 UTC] WordPress database error Unknown column 'description' in 'field list' for query INSERT INTO `wp_contacts` (`name`, `email`, `description`, `created_at`) VALUES ('Alejandro', 'alejandrocanadasgarcia@gmail.com', 'xxxx', 2024) made by do_action('wp_ajax_handle_contact_form'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form_submission
+[07-Oct-2024 16:24:45 UTC] WordPress database error Unknown column 'description' in 'field list' for query INSERT INTO `wp_contacts` (`name`, `email`, `description`, `created_at`) VALUES ('Alejandro', 'alejandrocanadasgarcia@gmail.com', 'xxx', 2024) made by do_action('wp_ajax_handle_contact_form'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form_submission
+[07-Oct-2024 17:01:13 UTC] WordPress database error Unknown column 'description' in 'field list' for query INSERT INTO `wp_contacts` (`name`, `email`, `description`, `created_at`) VALUES ('Alejandro', 'alejandrocanadasgarcia@gmail.com', 'xxxx', 2024) made by do_action('wp_ajax_handle_contact_form'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form_submission
+[08-Oct-2024 07:16:58 UTC] WordPress database error Unknown column 'created_at' in 'field list' for query INSERT INTO `wp_contacts` (`name`, `email`, `text`, `created_at`) VALUES ('Alejandro', 'alejandrocanadasgarcia@gmail.com', 'xxxx', 2024) made by do_action('wp_ajax_handle_contact_form'), WP_Hook->do_action, WP_Hook->apply_filters, handle_contact_form_submission

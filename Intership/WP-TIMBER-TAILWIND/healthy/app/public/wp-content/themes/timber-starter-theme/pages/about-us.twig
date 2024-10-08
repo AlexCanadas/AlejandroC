@@ -1,0 +1,60 @@
+{% extends "base.twig" %}
+
+{% block content %}
+  <div class="container mx-auto py-12">
+    <section class="text-center py-12 bg-green-500 text-white">
+      <h1 class="text-4xl font-bold mb-4">{{ post.meta('about_title') }}</h1>
+      <p class="text-lg">{{ post.meta('title_description') }}</p>
+    </section>
+
+    <section class="pt-12">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Nuestra Historia</h2>
+        <p class="text-gray-700 mb-6">Healthy nace de la pasión por llevar una vida más equilibrada y plena. Creemos que cada persona merece tener acceso a información clara y práctica para mejorar su salud y bienestar. Desde 2024, nos hemos dedicado a compartir recetas saludables, consejos de entrenamiento físico y guías de nutrición.</p>
+
+        <p class="text-gray-700 mb-6">Nos dimos cuenta de la necesidad de un espacio en el que las personas pudieran encontrar todo lo que necesitan para llevar una vida sana sin complicaciones. Es por eso que creamos Healthy: para ofrecerte un lugar donde puedas aprender a cuidar tu cuerpo y tu mente a través de cambios sostenibles.</p>
+
+        <h2 class="text-3xl font-bold mb-6">Nuestra Misión</h2>
+        <p class="text-gray-700 mb-6">Nuestra misión es simple: ayudarte a sentirte bien contigo mismo. Queremos ofrecerte las herramientas necesarias para que puedas alcanzar tus objetivos de salud y bienestar de manera natural y a tu propio ritmo.</p>
+
+        <h2 class="text-3xl font-bold mb-6">Nuestros Valores</h2>
+        <ul class="list-disc list-inside text-gray-700 mb-6">
+          <li><strong>Salud Holística:</strong> Creemos en el cuidado integral del cuerpo y la mente.</li>
+          <li><strong>Educación Accesible:</strong> Todo el mundo debería tener acceso a información clara sobre nutrición y ejercicio.</li>
+          <li><strong>Sostenibilidad:</strong> Promovemos hábitos que no solo te beneficien a ti, sino también al medio ambiente.</li>
+          <li><strong>Comunidad:</strong> Sabemos que es más fácil cambiar tu estilo de vida cuando tienes el apoyo de otros.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold mb-6">Nuestro Equipo</h2>
+        <p class="text-gray-700 mb-6">Somos un grupo de profesionales en nutrición, entrenamiento físico y bienestar. Nos apasiona ayudar a las personas a mejorar su calidad de vida, y trabajamos constantemente para ofrecerte los mejores contenidos.</p>
+
+        <p class="text-gray-700 mb-6">Desde dietistas licenciados hasta entrenadores personales certificados, nuestro equipo está aquí para guiarte en tu viaje hacia una vida más saludable.</p>
+      </div>
+    </section>
+    
+    <!-- ACF: Show members bellow the main content -->
+    <section class="pt-2">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Miembros de nuestro equipo</h2>
+
+        {% if members %}
+          <div class="miembros-grid">
+            {% for miembro in members %}
+              <div class="miembro">
+                <h3 class="text-xl font-bold">{{ miembro.name }}</h3> 
+                <p class="text-gray-700">{{ miembro.role }}</p> 
+                <p class="text-gray-700">{{ miembro.description }}</p> 
+                {% if miembro.picture %}
+                  <img src="{{ miembro.picture.url }}" alt="{{ miembro.name }}" class="miembro-imagen">
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>No hay miembros disponibles.</p>
+        {% endif %}
+      </div>
+    </section>
+
+  </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}FitAndFood{% endblock %}</title>
+    {{ function('wp_head') }}  <!-- Cargar el head correctamente -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ function('home_url') }}">Home</a></li>
+                <li><a href="{{ function('home_url', '/services') }}">Services</a></li>
+                <li><a href="{{ function('home_url', '/about') }}">About</a></li>
+                <li><a href="{{ function('home_url', '/contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitAndFood. Todos los derechos reservados.</p>
+        {{ function('wp_footer') }}  <!-- Cargar scripts antes del cierre del body -->
+    </footer>
+</body>
+</html>
