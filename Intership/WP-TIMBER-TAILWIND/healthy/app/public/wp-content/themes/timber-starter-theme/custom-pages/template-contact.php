@@ -8,8 +8,8 @@
 
 $context = Timber::context();
 
-$menuSecond  	  = Timber::get_menu(3);
-$context['menuSecond'] = $menuSecond;  // xxxx
+/* $menuSecond  	  = Timber::get_menu(3);
+$context['menuSecond'] = $menuSecond;  */
 
 
 $templates  = array( 'contact.twig');

@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json()) // Process the data in JSON format
         .then(data => {
             if (data.success) {
-                alert(data.data); // Show success message if successful
+                window.location.href = data.data.redirect_url; // Redirect to the form-success page
             } else {
                 alert(data.data); // Show error message if negative response
             }

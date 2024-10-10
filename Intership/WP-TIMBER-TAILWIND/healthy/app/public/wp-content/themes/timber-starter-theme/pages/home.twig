@@ -16,7 +16,12 @@
 
         {% for post in latest_recipes %}
           <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img src="{{ post.thumbnail|resize(600,200) }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+            {% if post.custom_image %}
+              <img src="{{ post.custom_image.url|resize(600,200) }}" alt="{{ post.custom_image.alt }}" class="w-full h-48 object-cover">
+            {% elseif post.thumbnail %}
+              <img src="{{ post.thumbnail.src|resize(600,200) }}" alt="{{ post.title }}" class="w-full h-48 object-cover">
+            {% endif %}
+            
             <div class="p-4">
               <h3 class="text-xl font-bold mb-2">{{ post.title }}</h3>
               <p class="text-gray-600 mb-4">{{ post.excerpt }}</p>

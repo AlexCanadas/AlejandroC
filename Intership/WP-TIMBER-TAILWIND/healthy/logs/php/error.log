@@ -219,3 +219,94 @@ Stack trace:
 [08-Oct-2024 16:06:01 UTC] PHP Parse error:  syntax error, unexpected string content "i", expecting "]" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\mi-plugin-contacts\mi-plugin-contacts.php on line 62
 [08-Oct-2024 16:06:01 UTC] PHP Parse error:  syntax error, unexpected string content "i", expecting "]" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\mi-plugin-contacts\mi-plugin-contacts.php on line 62
 [08-Oct-2024 16:31:19 UTC] PHP Warning:  Undefined array key "accion_registro" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\plugins\mi-plugin-contacts\mi-plugin-contacts.php on line 108
+[09-Oct-2024 09:26:33 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[09-Oct-2024 09:26:43 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[09-Oct-2024 09:30:12 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 165
+[09-Oct-2024 09:30:14 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 165
+[09-Oct-2024 09:30:14 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 165
+[09-Oct-2024 09:30:14 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 165
+[09-Oct-2024 09:30:15 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 165
+[09-Oct-2024 09:30:18 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 165
+[09-Oct-2024 09:30:19 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 165
+[09-Oct-2024 09:30:19 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 165
+[09-Oct-2024 09:34:01 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[09-Oct-2024 09:34:11 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[09-Oct-2024 10:12:07 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 164
+[09-Oct-2024 10:13:40 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 164
+[09-Oct-2024 10:14:40 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 164
+[09-Oct-2024 10:15:00 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 164
+[09-Oct-2024 10:15:32 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[09-Oct-2024 10:16:06 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[09-Oct-2024 10:17:15 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[09-Oct-2024 11:38:11 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[09-Oct-2024 12:20:09 UTC] PHP Warning:  Undefined variable $recipes in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 92
+[09-Oct-2024 12:20:09 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 92
+[09-Oct-2024 12:20:09 UTC] PHP Warning:  Undefined variable $recipes in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 97
+[09-Oct-2024 12:20:54 UTC] PHP Warning:  Undefined variable $recipes in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 92
+[09-Oct-2024 12:20:54 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 92
+[09-Oct-2024 12:20:57 UTC] PHP Warning:  Undefined variable $recipes in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 92
+[09-Oct-2024 12:20:57 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 92
+[09-Oct-2024 12:21:00 UTC] PHP Warning:  Undefined variable $recipes in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 92
+[09-Oct-2024 12:21:00 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\functions.php on line 92
+[09-Oct-2024 14:22:48 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12
+[10-Oct-2024 12:48:40 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "s" in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php:12
+Stack trace:
+#0 C:\Users\Alex\Local Sites\healthy\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\Alex\Local Sites\healthy\app\public\wp-blog-header.php(19): require_once('C:\\Users\\Alex\\L...')
+#2 C:\Users\Alex\Local Sites\healthy\app\public\index.php(17): require('C:\\Users\\Alex\\L...')
+#3 {main}
+  thrown in C:\Users\Alex\Local Sites\healthy\app\public\wp-content\themes\timber-starter-theme\custom-pages\template-form-success.php on line 12

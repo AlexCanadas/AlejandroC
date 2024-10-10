@@ -5,7 +5,9 @@
 
   <h1 class="text-4xl font-bold text-center mb-4">{{ post.title }}</h1>
   
-  {% if post.thumbnail %}
+  {% if custom_image %}
+    <img src="{{ custom_image.url }}" alt="{{ custom_image.alt }}" class="w-64 h-64 object-cover rounded-lg mx-auto mb-6 shadow-md">
+  {% elseif post.thumbnail %}
     <img src="{{ post.thumbnail.src }}" alt="{{ post.title }}" class="w-64 h-64 object-cover rounded-lg mx-auto mb-6 shadow-md">
   {% endif %}
   
@@ -18,5 +20,27 @@
       Volver a la lista de recetas
     </a>
   </div>
+
+  <!-- Show suggested recipes -->
+  {% if suggested_recipes %}
+    <div class="related-recipes mt-10">
+      <h3 class="text-2xl font-bold text-center mb-4">Recetas Sugeridas</h3>
+      <ul class="flex flex-wrap justify-center space-x-4">
+        {% for recipe in suggested_recipes %}
+          <li class="w-full md:w-1/2 lg:w-1/4 p-4">
+            <a href="{{ recipe.link }}" class="block bg-white shadow-lg rounded-lg p-4 text-center hover:shadow-xl transition duration-300">
+              {% if recipe.custom_image %}
+              <img src="{{ recipe.custom_image.url|resize(600,200) }}" alt="{{ recipe.custom_image.alt }}" class="w-full h-48 object-cover">
+            {% elseif recipe.thumbnail %}
+              <img src="{{ recipe.thumbnail.src|resize(600,200) }}" alt="{{ recipe.title }}" class="w-full h-48 object-cover">
+            {% endif %}
+              <h4 class="font-bold">{{ recipe.title }}</h4>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
 </div>
 {% endblock %}

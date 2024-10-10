@@ -76,6 +76,7 @@ function mytheme_enqueue_styles() {
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_styles');
 
 
+// ----------------------------Last 6 recipes---------------------------------
 // We add a filter to print the last 6 recipes of the CPT 
 add_filter('timber_context', 'add_recipes_to_context');
 function add_recipes_to_context($context) {
@@ -86,9 +87,11 @@ function add_recipes_to_context($context) {
         'orderby' => 'date',
         'order' => 'DESC'
     ));
+    
     return $context;
 }
 
+// -------------------------All recipes----------------------------------
 // We add a filter to print all recipes of the CPT 
 add_filter('timber_context', 'add_all_recipes_to_context');
 function add_all_recipes_to_context($context) {
@@ -99,11 +102,46 @@ function add_all_recipes_to_context($context) {
         'orderby' => 'date',
         'order' => 'DESC'
     ));
+
+    return $context;
+}
+
+// --------------------Suggested recipes----------------------
+// Function to get the suggested recipes for a single recipe post 
+add_filter('timber_context', 'add_suggested_recipes_to_context');
+function add_suggested_recipes_to_context($context) {
+    // Get the current post
+    $post = Timber::get_post();
+
+    // Get the related recipes using ACF with the correct field name
+    $suggested_recipes = get_field('suggested_recipes', $post->ID);
+
+    // Give the correct recipes to the context
+    if ($suggested_recipes) {
+        $context['suggested_recipes'] = Timber::get_posts($suggested_recipes);
+    }
+
+    return $context;
+}
+
+// ----------------Get post image---------------
+add_filter('timber_context', 'add_custom_image_to_context');
+function add_custom_image_to_context($context) {
+    $post = Timber::get_post();
+    
+    // Obtener el campo de imagen personalizado de ACF
+    $custom_image = get_field('custom_image', $post->ID);
+
+    // Pasar la imagen al contexto de Timber
+    if ($custom_image) {
+        $context['custom_image'] = $custom_image;
+    }
+
     return $context;
 }
 
 
-
+// -------------------------------AJAX--------------------------------
 function enqueue_custom_scripts() {
     wp_enqueue_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), null, true); 
 
@@ -116,6 +154,7 @@ function enqueue_custom_scripts() {
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
 
+// ----------------------------Form function--------------------------------
 function handle_contact_form_submission() {
 
     if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['description'])) {
@@ -138,7 +177,14 @@ function handle_contact_form_submission() {
         $success = $wpdb->insert($table_name, $data, $format);
 
         if ($success) {
-            wp_send_json_success('Datos insertados correctamente');
+            $to = $email; // Send confirmation email to the user
+            $subject = 'Confirmación de contacto';
+            $message = 'Hola ' . $name . ",\n\nGracias por contactarnos. Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.\n\nTu mensaje:\n" . $description;
+            $headers = array('Content-Type: text/plain; charset=UTF-8'); // Header to have plain text
+
+            wp_mail($to, $subject, $message, $headers);
+
+            wp_send_json_success(array('redirect_url' => home_url('/form-success')));
         } else {
             wp_send_json_error($wpdb->show_errors());
         }
@@ -151,3 +197,6 @@ function handle_contact_form_submission() {
 
 add_action('wp_ajax_handle_contact_form', 'handle_contact_form_submission'); // For authenticated users
 add_action('wp_ajax_nopriv_handle_contact_form', 'handle_contact_form_submission'); // For non authenticated users
+
+
+
