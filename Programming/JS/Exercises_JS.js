@@ -6,7 +6,7 @@
 // 2. Escribe un comentario en varias líneas
 /*
 Este es un comentario
-en varias líneas
+en varias líneas xxxxx
 */
 
 // 3. Declara variables con valores asociados a todos los datos de tipo primitivos
